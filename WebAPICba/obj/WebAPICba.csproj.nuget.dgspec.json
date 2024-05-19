@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mkrtc\\source\\repos\\WebAPICba\\WebAPICba\\WebAPICba.csproj": {}
+    "C:\\Users\\mkrtc\\source\\WebAPICba\\WebAPICba\\WebAPICba.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mkrtc\\source\\repos\\WebAPICba\\WebAPICba\\WebAPICba.csproj": {
+    "C:\\Users\\mkrtc\\source\\WebAPICba\\WebAPICba\\WebAPICba.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mkrtc\\source\\repos\\WebAPICba\\WebAPICba\\WebAPICba.csproj",
+        "projectUniqueName": "C:\\Users\\mkrtc\\source\\WebAPICba\\WebAPICba\\WebAPICba.csproj",
         "projectName": "WebAPICba",
-        "projectPath": "C:\\Users\\mkrtc\\source\\repos\\WebAPICba\\WebAPICba\\WebAPICba.csproj",
+        "projectPath": "C:\\Users\\mkrtc\\source\\WebAPICba\\WebAPICba\\WebAPICba.csproj",
         "packagesPath": "C:\\Users\\mkrtc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mkrtc\\source\\repos\\WebAPICba\\WebAPICba\\obj\\",
+        "outputPath": "C:\\Users\\mkrtc\\source\\WebAPICba\\WebAPICba\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
