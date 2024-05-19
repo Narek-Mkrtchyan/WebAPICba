@@ -22,3 +22,12 @@ WebAPICba is an ASP.NET Core web application that interacts with the Central Ban
 
 ```http
 GET /api/exchangerates?DateFrom=YYYY-MM-DD&DateTo=YYYY-MM-DD&ISOCodes=USD,EUR
+
+### Retrieve Exchange Rates by Date Range
+
+Retrieve exchange rates for a specified date range and list of currency ISO codes.
+
+#### HTTP Request
+
+```http
+GET /api/exchangerates?DateFrom=YYYY-MM-DD&DateTo=YYYY-MM-DD&ISOCodes=USD,EUR
