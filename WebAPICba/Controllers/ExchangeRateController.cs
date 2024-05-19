@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Threading.Tasks;
 using WebAPICba.Services;
+using WebAPICba.Models;
 
 namespace WebAPICba.Controllers
 {
@@ -9,37 +12,21 @@ namespace WebAPICba.Controllers
     {
         private readonly ExchangeRateService _exchangeRateService;
 
-        // Constructor to inject ExchangeRateService instance
         public ExchangeRateController(ExchangeRateService exchangeRateService)
         {
             _exchangeRateService = exchangeRateService;
         }
 
-        // Action to fetch and save exchange rates based on provided parameters
-        [HttpGet("fetch")]
-        public async Task<IActionResult> FetchExchangeRates([FromQuery] DateTime dateFrom, [FromQuery] DateTime dateTo, [FromQuery] string isoCodes)
+        [HttpGet("exchange-rates")]
+        public async Task<IActionResult> GetAndFetchExchangeRates([FromQuery] DateTime dateFrom, [FromQuery] DateTime dateTo, [FromQuery] string isoCodes)
         {
-            // Split ISO codes string into an array
             var isoCodeArray = isoCodes.Split(',');
 
-            // Call ExchangeRateService method to fetch and save exchange rates asynchronously
+            // Fetch and save exchange rates from the API
             await _exchangeRateService.FetchAndSaveExchangeRates(dateFrom, dateTo, isoCodeArray);
 
-            // Return OK response with a message indicating success
-            return Ok("Exchange rates fetched and saved.");
-        }
-
-        // Action to get exchange rates based on provided parameters
-        [HttpGet]
-        public async Task<IActionResult> GetExchangeRates([FromQuery] DateTime dateFrom, [FromQuery] DateTime dateTo, [FromQuery] string isoCodes)
-        {
-            // Split ISO codes string into an array
-            var isoCodeArray = isoCodes.Split(',');
-
-            // Call ExchangeRateService method to get exchange rates asynchronously
+            // Get exchange rates from the database
             var rates = await _exchangeRateService.GetExchangeRates(dateFrom, dateTo, isoCodeArray);
-
-            // Return OK response with the exchange rates retrieved from the service
             return Ok(rates);
         }
     }
